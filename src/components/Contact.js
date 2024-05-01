@@ -29,13 +29,13 @@ const Contact = () => {
 
 
     const handleSubmit = (e) => {
-        setIsLoading(true)
         e.preventDefault()
 
         if(!formData.name || !formData.email || !formData.message || !formData.subject) {
             return toast.error('please complete all fields')
-        }
+        };
 
+        setIsLoading(true);
         emailjs
             .send(
                 'service_h9slcyg',
